@@ -1,6 +1,8 @@
 .container {
-    background-color: black;
+    background-color: red;
     display: flex;
-    flex-direction: column;
-}
+    flex-wrap: wrap;
+    width: 400px;
+    height: 200px;
     
+}
