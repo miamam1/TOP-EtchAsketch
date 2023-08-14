@@ -1,22 +1,41 @@
 const container = document.querySelector('.container')
-
-//so idk what im doing i might need to redo this completely use google n shit
-//NVM IM A FUCKING JENIUS HOLY SHITTTIJPEAJEIJERIQJWPJPIEW
-//but it doesnt wotk really cus its not 16x16 its just.. 16 need to consider y axis as well 
-//this is probably a for loop nested inside a this for loop
-//logic is: for each div created, create 16 divs under that div 
-
-for(let i = 0; i < 255; i++) {
-    const gridSquare = document.createElement('div')
-    gridSquare.style.border = " solid black"
-    gridSquare.style.width = "25px"
-    gridSquare.style.height = "12px"
-    gridSquare.style.background = "white"
-    gridSquare.style.border = "1px solid grey"
-    container.appendChild(gridSquare)
+ 
+ function createGrid(x) {
+    // so - 2 is needed to account for the space taken up by the border.
+    // i think border takes up double the px: so eg. a border with 7px solid black 
+    // would require another 14px to be accounte for, so calculation would be -14 instead
+    // of 2
+    let y = (600 / x) - 2
+    x *= x
+    for(let i = 0; i < x; i++) {
+        const gridSquare = document.createElement('div')
+        gridSquare.style.border = "1px solid black"
+        gridSquare.style.width = y + 'px'
+        gridSquare.style.height = y + 'px'
+        gridSquare.style.background = "white"
+        
+        
+        
+        
+        
+        gridSquare.addEventListener('mouseenter' , () => gridSquare.style.background = "black" )
+        container.appendChild(gridSquare)
+        
+    }
     
-    
+
+
+
+
 }
+
+
+
+
+
+createGrid(4)
+
+
 
 
 

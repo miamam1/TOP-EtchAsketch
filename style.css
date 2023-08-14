@@ -1,8 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
 .container {
     background-color: red;
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 600px;
+    
+   
+    
+    
+    /* maybe use flex shrink for larger pixel sizes so no additional pixels areused */
     
 }
