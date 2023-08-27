@@ -6,7 +6,7 @@ body {
     background-color: rgb(235, 228, 228);
     margin: 0;
     padding: 0;
-    
+
     
     
 }
@@ -34,4 +34,8 @@ body {
     margin: 10px;
     border-radius: 10px;
 
+}
+
+.buttonContainer {
+    display: flex;
 }

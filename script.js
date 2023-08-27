@@ -93,10 +93,20 @@ function clearGrid() {
 
 let rainbowActive = false
 
+
+
 function rainbowBtn() {
     rainbow(userSize, userColor)
-    return rainbowActive = true
+    rainbowActive = true
+    document.getElementById('HTMLrainbowBtn').onclick = rainbowBtnToggle
 }
 
 
 
+
+function rainbowBtnToggle() {
+    rainbowActive = false
+    createGrid(userSize, userColor, userPenColor)
+    document.getElementById('HTMLrainbowBtn').onclick = rainbowBtn
+
+}
