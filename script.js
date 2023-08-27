@@ -98,6 +98,7 @@ let rainbowActive = false
 function rainbowBtn() {
     rainbow(userSize, userColor)
     rainbowActive = true
+    document.getElementById('HTMLrainbowBtn').style.color = "#" + Math.floor(Math.random()*16777215).toString(16)
     document.getElementById('HTMLrainbowBtn').onclick = rainbowBtnToggle
 }
 
@@ -108,5 +109,5 @@ function rainbowBtnToggle() {
     rainbowActive = false
     createGrid(userSize, userColor, userPenColor)
     document.getElementById('HTMLrainbowBtn').onclick = rainbowBtn
-
+    document.getElementById('HTMLrainbowBtn').style.color = "black"
 }
